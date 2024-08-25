@@ -1,0 +1,20 @@
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #021526;
+   color: white;
+   text-transform: capitalize;
+   padding: 10px;
+}
+li{
+    list-style: none;
+}
+h6{
+    font-size: 16px;
+}
+.cols{
+    height: 150px;
+    width: 250px;
+    padding-top: 20px;
+}

@@ -1,0 +1,26 @@
+nav{
+    background-color: #021526;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: capitalize;
+    color: white;
+}
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color:white;
+}
+ul li{
+    list-style-type: none;
+    margin: 5px;
+    font-size: 20px;
+    text-transform: capitalize;
+    
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+}

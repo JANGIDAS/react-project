@@ -58,7 +58,7 @@ function Home({ data }) {
           <Link to={`/product/${i.id}`} key={i.id}>
             <div className='main'>
               <div className='imgs'>
-                <img src={i.images} alt={i.title} />
+                <img src={i.image} alt={i.title} />
               </div>
               <div className='body'>
                 <h1>{i.category.name}</h1>

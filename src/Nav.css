@@ -24,3 +24,9 @@ ul li a{
     text-decoration: none;
     color: white;
 }
+
+.cart{
+    margin-left: 200px;
+    text-decoration: none;
+    color: aliceblue;
+}

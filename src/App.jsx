@@ -8,12 +8,16 @@ import About from './About'
 import Footer from './Footer'
 import Contact from './Contact'
 import Productdetai from './Productdetai'
+import AddToCart from './AddToCart';
 
 function App() {
   
   const [datas,setdata]=useState([])
+  const [addCart, setAddCart] = useState([])
+
+  // api fetching 
   async function fetchData(){
-    await fetch('https://api.escuelajs.co/api/v1/products')
+    await fetch('https://fakestoreapi.com/products')
   .then(res=> res.json())
   .then(data=> setdata(data))
   }
@@ -22,6 +26,19 @@ function App() {
     fetchData();
    },[])
 
+   console.log(datas);
+   
+
+   // add to cart
+
+   const addToCartt = (product) => {
+      setAddCart([...addCart, product]);
+  
+  };
+   
+  console.log('Datas:', datas);
+  console.log('AddCart:', addCart);
+
    
   return (
     <>
@@ -29,9 +46,10 @@ function App() {
     <Routes>
         <Route exact path='/' element={<Home  data={datas}/>} />
         <Route path='/product' element={<Product data={datas}/>} />
-        <Route path='/product/:id' element={<Productdetai data={datas} />} />
+        <Route path='/product/:id' element={<Productdetai data={datas} addToCartt={addToCartt} />} />
         <Route path='/about' element={<About/>} />
         <Route path='/contact' element={<Contact/>} />
+        <Route path='/add-to-cart' element={<AddToCart data={addCart} />} />
       </Routes>
       <Footer/>
     </>

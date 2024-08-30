@@ -14,7 +14,7 @@ function Product({data}){
      <Link to={`/product/${i.id}`} key={i.id}>
       <div className='main' >
      <div className='imgs'>
-      <img src={i.images} alt="" />
+      <img src={i.image} alt="" />
      </div>
 
      <div className='body'>
